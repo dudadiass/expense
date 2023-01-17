@@ -1,8 +1,8 @@
+import 'package:expense/main.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../models/expense.dart';
-
 
 class ItemDespesa extends StatelessWidget {
   final Despesa despesa;
@@ -25,7 +25,11 @@ class ItemDespesa extends StatelessWidget {
 //-------------------------------------------------------
             Container(
               width: 150,
-              color: const Color(0XFF8f3636),
+              decoration: BoxDecoration(
+                border: Border.all(width: 1.0, color: Colors.white),
+                color: const Color(0XFF8f3636),
+                borderRadius: BorderRadius.circular(9),
+              ),
               padding: const EdgeInsets.all(12.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,6 +42,7 @@ class ItemDespesa extends StatelessWidget {
                       despesa.descricao,
                       style:
                           const TextStyle(fontSize: 17.0, color: Colors.white),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   Text(despesa.tipo.title,
