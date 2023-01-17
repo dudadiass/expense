@@ -26,8 +26,7 @@ class ItemDespesa extends StatelessWidget {
             Container(
               width: 150,
               decoration: BoxDecoration(
-                border: Border.all(width: 1.0, color: Colors.white),
-                color: const Color(0XFF8f3636),
+                border: Border.all(width: 1.0, color: Colors.black),
                 borderRadius: BorderRadius.circular(9),
               ),
               padding: const EdgeInsets.all(12.0),
@@ -40,17 +39,14 @@ class ItemDespesa extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 8.0),
                     child: Text(
                       despesa.descricao,
-                      style:
-                          const TextStyle(fontSize: 17.0, color: Colors.white),
+                      style: const TextStyle(fontSize: 17.0),
                       textAlign: TextAlign.center,
                     ),
                   ),
                   Text(despesa.tipo.title,
-                      style:
-                          const TextStyle(color: Colors.white, fontSize: 12.0)),
+                      style: const TextStyle(fontSize: 12.0)),
                   Text(DateFormat("dd/MM/yyyy").format(despesa.data),
-                      style:
-                          const TextStyle(color: Colors.white, fontSize: 12.0)),
+                      style: const TextStyle(fontSize: 12.0)),
                 ],
               ),
             ),
